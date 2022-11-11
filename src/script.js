@@ -3,12 +3,13 @@ var index = 0
 var textPosition = 0
 var flag = true;
 var destination = document.getElementById("typedtext")
+var button = document.getElementById("Infobutton");
 
 window.addEventListener('load',typewriter);
-
+button.addEventListener('click',popup);
+document.getElementById("greeting-text").textContent="Гиндуллина Динара Рафисовна"
 function typewriter(){
     if(flag){
-        //loadQuote();
         quoteArray[index] += ' ';
         flag = false;
     }
@@ -19,10 +20,19 @@ function typewriter(){
         setTimeout('typewriter()',100);
     }
     else{
-        //quoteArray[index] = ' ';
-        setTimeout('typewriter', 3000);
+        console.log("!!!!!");
+        
         textPosition = 0;
         flag = true;
-
+        setTimeout('typewriter()', 10000);
     }
 }
+
+function popup(){
+    $('.open-popup').on('click', function(){
+        $('.popup-container').css('display','flex');
+    });
+    $('.close-button').on('click', function(){
+        $('.popup-container').css('display','none');
+    });
+};
