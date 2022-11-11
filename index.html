@@ -170,6 +170,33 @@
             background-position: center center;
             background-repeat: no-repeat;
         }
+        .greeting{
+            /* background-color: aliceblue; */
+            /* background-size: 200px; */
+            text-align: center;
+            max-height: 200px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        #typedtext{
+            font-family: "Neuropol X";
+            letter-spacing: 2px;
+            padding: 80px;
+            font-size: 22px;
+            background-color: black;
+            background-size: cover;
+            color:#00FFFF;
+            text-shadow:0 0 10px #00FFFF;
+        }
+        span{
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50%{
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -192,6 +219,11 @@
             <button class="light-button open-popup">Контактная информация</button>
         </div>
     </header>
+    <section class="fixed-container greeting">
+        <div id="typedtext">
+            <p id="quote"></p>
+        </div>
+    </section>
     <section class="fixed-container first-block" id="mslf">
         <div>
             <h1 class="text-center">Dinara Gindullina - official site </h1>
@@ -238,5 +270,6 @@
         <div>Email</div>
     </section>
     
+    <script src="src/script.js"></script>
 </body>
 </html>
