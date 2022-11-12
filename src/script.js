@@ -1,38 +1,44 @@
-var quoteArray = ["Добро пожаловать на официальную страницу Динары Гиндуллиной"]
-var index = 0
-var textPosition = 0
-var flag = true;
-var destination = document.getElementById("typedtext")
-var button = document.getElementById("Infobutton");
+const quoteArray = ['Добро пожаловать на официальную страницу Динары Гиндуллиной'];
+const index = 0;
+let textPosition = 0;
+let flag = true;
+const button = document.getElementById('Infobutton');
 
-window.addEventListener('load',typewriter);
-button.addEventListener('click',popup);
-document.getElementById("greeting-text").textContent="Гиндуллина Динара Рафисовна"
-function typewriter(){
-    if(flag){
-        quoteArray[index] += ' ';
-        flag = false;
-    }
+document.getElementById('greeting-text').textContent = 'Гиндуллина Динара Рафисовна'; // просто было интересно так вставить текст
 
-    document.querySelector("#quote").innerHTML = quoteArray[index].substring(0, textPosition) + '<span>\u25AE</span>';
+$('#infoButton').click(() => {
+  window.location.href = 'index.html';
+  return false;
+});
+function typewriter() {
+  if (flag) {
+    quoteArray[index] += ' ';
+    flag = false;
+  }
 
-    if(textPosition++ != quoteArray[index].length){
-        setTimeout('typewriter()',100);
-    }
-    else{
-        console.log("!!!!!");
-        
-        textPosition = 0;
-        flag = true;
-        setTimeout('typewriter()', 10000);
-    }
+  document.querySelector('#quote').innerHTML = `${quoteArray[index].substring(0, textPosition)}<span>\u25AE</span>`;
+  textPosition += 1;
+  if (textPosition !== quoteArray[index].length) {
+    setTimeout(() => {
+      typewriter();
+    }, 100);
+  } else {
+    textPosition = 0;
+    flag = true;
+    setTimeout(() => {
+      typewriter();
+    }, 10000);
+  }
 }
 
-function popup(){
-    $('.open-popup').on('click', function(){
-        $('.popup-container').css('display','flex');
-    });
-    $('.close-button').on('click', function(){
-        $('.popup-container').css('display','none');
-    });
-};
+function popup() {
+  $('.open-popup').on('click', () => {
+    $('.popup-container').css('display', 'flex');
+  });
+  $('.close-button').on('click', () => {
+    $('.popup-container').css('display', 'none');
+  });
+}
+
+window.addEventListener('load', typewriter);
+button.addEventListener('click', popup);

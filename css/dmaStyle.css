@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.video-block {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+}
+
+video {
+  width: 533px;
+  height: 300px;
+  object-fit: cover;
+}

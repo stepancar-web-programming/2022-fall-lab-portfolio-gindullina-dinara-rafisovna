@@ -1,251 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>
-        Динара Гиндуллина
-    </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
-
-    </script>
-    <!-- <script>
-        $(function(){
-            $('.open-popup').on('click', function(){
-                $('.popup-container').css('display','flex');
-            });
-            $('.close-button').on('click', function(){
-                $('.popup-container').css('display','none');
-            });
-        });
-    </script> -->
-    <style>
-        * {
-            font-family: Arial, Helvetica, sans-serif;
-            /* color: white; */
-            
-        }
-        html, body {
-            /* height: 100%; */
-            margin: 0;
-            padding: 0;
-            background:linear-gradient(0.50turn, #000, #00FFFF,rgb(63, 85, 85));
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            /* align-items: center; */
-            /* justify-content: center; */
-        }
-        header {
-            /* background-color: black; */
-            height: 100px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-        }
-        .black-text{
-            color: #000;
-        }
-        .white-text{
-            color: white;
-        }
-        .fixed-container {
-            padding-left: 80px;
-            padding-right: 80px;
-            width: 840px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        nav a {
-            margin-right: 20px ;
-        }
-        a {
-            text-decoration: none;
-            color: white;
-            cursor: pointer;
-        
-        }
-        a:hover{
-            text-decoration: underline;
-        }
-        .light-button {
-            text-decoration: none;
-            display: inline-block;
-            color: white;
-            padding: 15px 20px;
-            margin: 10px 0px;
-            border-radius: 10px;
-            font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background-image: linear-gradient(to right, #1c1d1d 0%, #0bd4ee 51%, #9EEFE1 100%);
-            background-size: 200% auto;
-            box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-            transition: .5s;
-            cursor: pointer;
-        }
-        .center-button{
-            position: relative;
-            left: 50%;
-            transform: translate(-50%, 0);
-        }
-        .first-block{
-            display: flex;
-            flex-direction: row;
-            height: 500px;
-            /* background-color:#536969; */
-            background-image: url('img/img_2.jpg');
-            background-repeat: no-repeat;
-            background-position: right center;
-            background-size: 400px 600px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            /* vertical-align: middle; */
-        }
-        /* section {
-            display: flex;
-            align-items: center;
-        } */
-        .text-center{
-            margin-top: 5px;
-        }
-        /* .services-block{
-            background-color: rgba(121, 173, 173, 0.263);
-            
-        } */
-        .services-container{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            /* background-color: antiquewhite; */
-        }
-        .services-container div{
-            height: 100px;
-            padding-top: 30px;
-            background-position: top;
-            background-repeat: no-repeat;
-            /* background-color: #000; */
-            background-size: 100px 80px;
-            /* background-size: 98px 70px; */
-        }
-        .service-1{
-            background-image: url('img/java.jpg');
-            /* background-color: rgb(255, 144, 53); */
-        }
-        .service-2{
-            background-image: url('img/sql.jpg');
-        }
-        .service-3{
-            background-image: url('img/ml.jpg');
-        }
-        .prefers-block{
-            /* background-color: rgb(126, 19, 85); */
-            margin-top: 20px;
-            color: rgb(0, 0, 0);
-        }
-        .prefer-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        .footer-block{
-            /* background-color: bisque; */
-            margin-top: 30px;
-        }
-        .footer-container{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding-bottom: 30px;
-        }
-        .li-none-markers{
-            list-style-type: none; 
-            padding-left: 30px;
-        }
-        section div{
-            /* background-color: aliceblue; */
-            display: flex;
-            flex-direction: column;
-            /* align-items: center; */
-            justify-content: center;
-            /* text-align: center; */
-        }
-        .popup-container{
-            display: none;
-            position: fixed;
-            z-index: 10;
-            width: 100%;
-            height: 100%;
-            background-color: #000000ba;
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-        .popup{
-            background-color: white;
-            border-radius: 10px;
-            padding: 30px;
-            width: 300px;
-            height: 200px;
-            position: relative;
-        }
-        .popup h2{
-            margin-top: 0px;
-        }
-        .popup input{
-            display: block;
-            font-size: 20px;
-            width: 190px;
-            margin-bottom: 10px;
-        }
-        .close-button{
-            position: absolute;
-            top:10px;
-            right: 10px;
-            width: 24px;
-            height: 24px;
-            background-image: url('img/krest.jpg');
-            background-size: 24px 24px;
-            background-position: center center;
-            background-repeat: no-repeat;
-        }
-        .greeting{
-            /* background-color: aliceblue; */
-            /* background-size: 200px; */
-            text-align: center;
-            max-height: 50px;
-            margin-top: 0px;
-            margin-bottom: 5px;
-        }
-        #typedtext{
-            /* font-family: ; */
-            letter-spacing: 2px;
-            padding: 0px;
-            font-size: 22px;
-            /* background-color: black; */
-            background-size: cover;
-            color:#00FFFF;
-            text-shadow:0 0 10px #00FFFF;
-        }
-        span{
-            animation: blinker 1s linear infinite;
-        }
-
-        @keyframes blinker {
-            50%{
-                opacity: 0;
-            }
-        }
-    </style>
+  <title>
+    Динара Гиндуллина
+  </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+  </script>
+  <link rel="stylesheet" href="css/mainStyle.css">
+  <link rel="stylesheet" href="css/indexStyle.css">
 </head>
+
 <body>
-    <div class="popup-container">
-        <div class="popup">
-            <a href="#" class="close-button"></a>
-            <h2>Контактная информация</h2>
-        <div class="">
+  <div class="popup-container">
+    <div class="popup">
+      <a href="#" class="close-button"></a>
+      <h2>Контактная информация</h2>
+      <div class="">
         <li>Email: gindullina_2002@mail.ru</li>
         <br>
         <li>Telegram: @blabla9111</li>
@@ -253,94 +24,95 @@
         <li>Gitlab: dinaragindullinaa</li>
         <br>
         <li>Github: blabla9111</li>
-        </div>
-            <!-- <button class="light-button center-button">Закрыть</button> -->
-        </div>
+      </div>
     </div>
-    <header class="fixed-container white-text">
-        <nav>
-            <a goto="first-block" href="#mslf">О себе</a>
-            <a goto ="services-block" href="#skll" >Навыки</a>
-            <a goto ="prefers-block" href="#prf" >Интересы</a>
-        </nav>
-        <div>
-            <button class="light-button open-popup" id="Infobutton">Контактная информация</button>
-        </div>
-    </header>
-    <section class="fixed-container greeting">
-        <div id="typedtext">
-            <p id="quote"></p>
-        </div>
-    </section>
-    <section class="fixed-container first-block" id="mslf">
-        <div>
-            <h1 class="text-center" id="greeting-text"> </h1>
-            <div class="text-center">Студентка 3 курса Университета ИТМО</div>
-            <div class="text-center">Направление "Программная инженерия"</div>
-        </div>
-    </section>
-    <section class="fixed-container services-block black-text" id="skll">
-        <h2>Мои навыки</h2>
-        <div class="services-container" id="skills">
-            <div class="service-1">
-                <!-- <img src="img/java.jpg" height="20px" width="auto"> -->
-                <br><br>
-                <b>Программирование на Java</b>
-            </div>
-            <div class="service-2">
-                <br><br>
-                <b>Навыки работы с SQL</b>
-            </div>
-            <div class="service-3">
-                <br><br>
-                <b>Владею основами Машинного обучения</b>
-            </div>
-        </div>
-    </section>
-    <section class="fixed-container prefers-block" id="prf">
-        <h2>Мои интересы</h2>
-        <ul>
-            <li>
-        <div class="prefer-container">
-            <div class="prefer-1">
-                Разработка мультемедийного контента
-                <a href="dma.html" class="black-text"> (Посмотреть примеры ...)</a>
-            </div>
-
-        </div>
-            </li>
-            <li>
-        <div class="prefer-container">
-            <div class="prefer-2">
-                Искусственный интелект, машинное обучение 
-            </div>
-
-        </div>
-            </li>
-            <li>
-        <div class="prefer-container">
-            <div class="prefer-3">
-                Веб-разработка
-            </div>
-
-        </div>
-            </li>
-        </ul>
-    </section>
-    <section class="fixed-container footer-block black-text">
-        <h2>Контактная информация</h2>
-        <div class="li-none-markers footer-container">
-        <li>Email: gindullina_2002@mail.ru</li>
-        <br>
-        <li>Telegram: @blabla9111</li>
-        <br>
-        <li>Gitlab: dinaragindullinaa</li>
-        <br>
-        <li>Github: blabla9111</li>
+  </div>
+  <header class="fixed-container white-text">
+    <nav>
+      <a goto="first-block" href="#mslf">О себе</a>
+      <a goto="services-block" href="#skll">Навыки</a>
+      <a goto="prefers-block" href="#prf">Интересы</a>
+    </nav>
+    <div>
+      <button class="light-button open-popup" id="Infobutton">Контактная информация</button>
     </div>
-    <!-- <br> -->
-    </section>
-    
-    <script src="src/script.js"></script>
+  </header>
+  <section class="fixed-container greeting">
+    <div id="typedtext">
+      <p id="quote"></p>
+    </div>
+  </section>
+  <section class="fixed-container first-block" id="mslf">
+    <div>
+      <h1 class="text-center" id="greeting-text"> </h1>
+      <div class="text-center">Студентка 3 курса Университета ИТМО</div>
+      <div class="text-center">Направление "Программная инженерия"</div>
+    </div>
+  </section>
+  <section class="fixed-container services-block black-text" id="skll">
+    <h2>Мои навыки</h2>
+    <div class="services-container" id="skills">
+      <div class="service-1">
+        <br>
+        <br>
+        <center><b>Программирование<br> на Java</b></center>
+      </div>
+      <div class="service-2">
+        <br>
+        <br>
+        <center><b>Навыки работы<br> с SQL</b></center>
+      </div>
+      <div class="service-3">
+        <br>
+        <br>
+        <center><b>Владею основами<br>Машинного обучения</b></center>
+      </div>
+    </div>
+  </section>
+  <section class="fixed-container prefers-block" id="prf">
+    <h2>Мои интересы</h2>
+    <ul>
+      <li>
+        <div class="prefer-container">
+          <div class="prefer-1">
+            Разработка мультемедийного контента
+            <a href="dma.html" class="black-text"> (Посмотреть примеры ...)</a>
+          </div>
+
+        </div>
+      </li>
+      <li>
+        <div class="prefer-container">
+          <div class="prefer-2">
+            Искусственный интелект, машинное обучение
+          </div>
+
+        </div>
+      </li>
+      <li>
+        <div class="prefer-container">
+          <div class="prefer-3">
+            Веб-разработка
+          </div>
+
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="fixed-container footer-block black-text">
+    <h2>Контактная информация</h2>
+    <div class="li-none-markers footer-container">
+      <li>Email: gindullina_2002@mail.ru</li>
+      <br>
+      <li>Telegram: @blabla9111</li>
+      <br>
+      <li>Gitlab: dinaragindullinaa</li>
+      <br>
+      <li>Github: blabla9111</li>
+    </div>
+  </section>
+
+  <script src="src/script.js"></script>
 </body>
+
 </html>

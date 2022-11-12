@@ -6,7 +6,9 @@
   "scripts": {
     "test": "test",
     "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix"
+    "lint:fix": "eslint ./src --fix",
+    "stylelint": "stylelint ./css",
+    "stylelint:fix": "stylelint ./css --fix"
   },
   "repository": {
     "type": "git",
@@ -22,9 +24,15 @@
     "eslint": "^8.27.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-css": "^0.6.0",
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "stylelint": "^14.14.1",
+    "stylelint-config-standard": "^29.0.0"
+  },
+  "dependencies": {
+    "stylefmt": "^6.0.3"
   }
 }
