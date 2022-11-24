@@ -45,14 +45,14 @@ a {
   cursor: pointer;
 }
 
-.black-link a{
+nav a {
+  margin-right: 20px;
+}
+
+.black-link a {
   text-decoration: none;
   color: black;
   cursor: pointer;
-}
-
-nav a {
-  margin-right: 20px;
 }
 
 a:hover {
