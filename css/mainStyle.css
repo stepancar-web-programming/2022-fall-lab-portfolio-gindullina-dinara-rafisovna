@@ -15,7 +15,6 @@ body {
 }
 
 header {
-  /* background-color: black; */
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -123,8 +122,6 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 30px;
-
-  /* padding-left: 5px; */
 }
 
 .li-none-markers {
@@ -133,7 +130,6 @@ a:hover {
 }
 
 section div {
-  /* background-color: aliceblue; */
   display: flex;
   flex-direction: column;
   justify-content: center;

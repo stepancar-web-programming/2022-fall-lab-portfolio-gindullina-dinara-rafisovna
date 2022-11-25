@@ -31,19 +31,6 @@
   max-height: 20px;
 }
 
-/* .service-1{
-    background-image: url('../img/1.jpg');
-    background-color: rgb(255, 144, 53);
-    background-color: aliceblue;
-}
-.service-2{
-    background-image: url('../img/2.jpg');
-    border: 1px solid red;
-    padding: 0px 0px;
-}
-.service-3{
-    background-image: url('../img/ml.jpg');
-} */
 .prefers-block {
   background-color: rgb(65 110 107);
   margin-top: 20px;
@@ -68,8 +55,6 @@
   letter-spacing: 2px;
   padding: 0;
   font-size: 22px;
-
-  /* background-color: black; */
   background-size: cover;
   color: #0ff;
   text-shadow: 0 0 10px #0ff;
