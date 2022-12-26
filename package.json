@@ -1,6 +1,7 @@
 {
   "name": "my-web-site",
   "version": "1.0.0",
+  "homepage": "https://blabla9111.github.io/my-web-site/",
   "description": "",
   "main": "index.js",
   "scripts": {
